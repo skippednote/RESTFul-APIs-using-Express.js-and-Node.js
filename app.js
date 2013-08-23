@@ -48,8 +48,7 @@ app.get('/employees/:id', function(req, res) {
 // POST
 app.post('/employees', function(req, res) {
     res.json(req.body);
-    db.employees.save(req.body, function() {
-        res.redirect('/employees');
+    db.employees.save(req.body);
     });
 });
 
